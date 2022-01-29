@@ -1,0 +1,33 @@
+function checkAnswer(fieldset) {
+    //選択肢のチェックボックスを参照
+    var cbox = fieldset.querySelectorAll("input[type=checkbox]");
+  
+    //正解・不正解を管理するフラグ
+    //true（正解）で始め、1つでも問題があればfalse（不正解）にする
+    var flag = true;
+  
+    //不正解時に正解を表示させるため、正解を集めるための配列
+    var ans = [];
+  
+    for(var i = 0; i < cbox.length; i++) {
+      if(cbox[i].dataset.answer === "1") {          //選択肢が正解の場合は、
+        ans.push(cbox[i].parentNode.textContent);   //選択肢を配列に入れる
+        if(cbox[i].checked === false) {             //正解なのにチェックされていない場合、
+          flag = false;                             //フラグをfalseにする
+        }
+      }
+      else if(cbox[i].dataset.answer === "0") {     //選択肢が不正解の場合は、
+        if(cbox[i].checked === true) {              //チェックされていた場合に、
+          flag = false;                             //フラグをfalseにする
+        }
+      }
+    }
+  
+    if(flag === true) {  //正解だった場合
+      window.alert("正解！");
+    }
+    else if(flag === false) {  //不正解だった場合
+      window.alert("不正解！\n\n正解：" + ans.join(", "));  //正解も表示
+    }
+    
+  }
