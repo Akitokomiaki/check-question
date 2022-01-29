@@ -1,0 +1,45 @@
+<HTML>
+    <HEAD>
+    <TITLE>サンプル</TITLE>
+    <SCRIPT language="JavaScript" src="test.js"></SCRIPT></HEAD>
+    <BODY>
+<fieldset>
+    <legend>Q1. 三角形の面積を求めるのに適している公式は何か？</legend>
+  
+    <p>
+      <!-- 独自属性としてdata-answerを付与　0：不正解　1：正解 -->
+      <label><input type="checkbox" data-answer="0">底辺×高さ÷３</label>
+      <label><input type="checkbox" data-answer="1">底辺×高さ÷２</label>
+      <label><input type="checkbox" data-answer="0">bc×cosA÷２</label>
+      <label><input type="checkbox" data-answer="1">bc×sinA÷２</label>
+    </p>
+  
+    <input type="button" onclick="checkAnswer(this.parentNode);" value="解答">
+  </fieldset>
+  
+  <fieldset>
+    <legend>Q2. プロジェクトメンバーを答えなさい。</legend>
+  
+    <p>
+      <label><input type="checkbox" data-answer="1">中澤</label>
+      <label><input type="checkbox" data-answer="0">本田</label>
+      <label><input type="checkbox" data-answer="1">小宮</label>
+      <label><input type="checkbox" data-answer="0">田中</label>
+      <label><input type="checkbox" data-answer="1">柴田</label>
+      <label><input type="checkbox" data-answer="1">山口</label>
+      <label><input type="checkbox" data-answer="1">天羽</label>
+      <label><input type="checkbox" data-answer="0">木村</label>
+      <label><input type="checkbox" data-answer="1">森岡</label>
+      <label><input type="checkbox" data-answer="1">高橋</label>
+      <label><input type="checkbox" data-answer="1">高田</label>
+      <label><input type="checkbox" data-answer="1">中東</label>
+      <label><input type="checkbox" data-answer="1">福田</label>
+      <label><input type="checkbox" data-answer="1">金子</label>
+      <label><input type="checkbox" data-answer="1">今井</label>
+    </p>
+  
+    <input type="button" onclick="checkAnswer(this.parentNode);" value="解答">
+  </fieldset>
+</FORM>
+</BODY>
+</HTML>
